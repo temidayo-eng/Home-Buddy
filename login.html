@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeBuddy login-page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+      <header>
+            <section class="header">
+              <div>
+                <nav class="nav-bar">
+                    <div class="logo-container">
+                       <img src="IMG/logo.png" alt="logo">
+                       <h1>HomeBuddy</h1>
+                    </div>
+                 </div>
+                <!--   <div class="nav-links">
+                     <ul>
+                         <li><a href="">Home</a></li>
+                         <li><a href="">About Us</a></li>
+                         <li><a href="">Properties</a></li>
+                         <li><a href="">Services</a></li>
+                         <li><a href="">contact Us</a></li>
+                     </ul>
+                    </div> -->
+                  </nav>
+                     <div>
+                      <Select id="country-select">
+                         <option value="select-country">NGN</option>
+                      </Select>
+                         <button class="signup-login log-in" id="form-open">Login</button>
+                    </div>
+             </section>
+         </header>
+
+          <!-- HOME -->
+          <section class="home_container">
+               <div class="form_container">
+                  <i class="fa fa-times form_close"></i>
+            <!-- LOGIN FORM -->
+                <div class="form login_form">
+                   <form action="#">
+                         <h2>Sign-in</h2>
+                         <p>Don't have an account? <a href="#">Create an account</a></p>
+                          <input type="email" placeholder="Email">
+                          <input type="password" placeholder="Password"><br>
+                          <button class="login_btn">Login</button>
+                          <p class="forgot-pw"><a href="#">Forgot password?</a></p>
+                   </form>
+                  </div>
+                   <!-- SIGNUP FORM -->
+                   <div class="form signup_form">
+                        <form action="#">
+                              <h2>Sign-up</h2>
+                              <p>Got an account? <a href="#">login</a></p>
+                               <input type="text" placeholder="First name">
+                               <input type="text" placeholder="Last name"><br>
+                               <input type="postcode" placeholder="Postcode (Optional)"><br>
+                               <input type="Email" placeholder="Email"><br>
+                               <input type="password" placeholder="Password"><br>
+                               <input type="tel" placeholder="Phone no"><br>
+                               <button class="login_btn">Create Account</button>
+                              <!--  <div class="forgot-pw">By creating an account you agree to our <a href="#">terms of use </a> and <a href="privacy policy."></a></div> -->
+                        </form>
+                    </div>
+            </div>
+      </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
