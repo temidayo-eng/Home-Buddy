@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this is to have the website responsive -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- this is to make the website compatible with all browsers -->
+    <meta name="description" content="Home-Buddy">
+    <!-- this is to describe the name of the website -->
+    <meta author="Home-Buddy" description="This is a Home-Buddy web application of which everyone can use to get the best home services">
+    <!-- this is to give the website a description -->
+    <link rel="Home-Buddy icon" href="/Home-Buddy/images/icon/Home-Buddy icon.png">
+    <!-- this is to give the website a icon -->
+     <link rel="stylesheet" href="/styles/privacy-terms.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <main class="container">
+        <!-- Left Side with Animation -->
+        <section class="left-side">
+            <div class="animated-text-container">
+                <p class="animated-text">
+                    <span>Your trusted companion for smarter living.</span>
+                    <span>We prioritize your privacy, protect your personal data,</span>
+                    <span>and deliver seamless solutions to make your home secure,</span>
+                    <span>comfortable, and intelligently connected.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Right Side with Privacy and Terms -->
+        <section class="right-side">
+            <div class="right-side-policy-terms-container">
+                <div class="right-side-policy">
+                    <input type="checkbox" id="privacyPolicy">
+                    <p class="privacy-policy">I agree and accept <a href="privacy.html" class="animated-link">Privacy Policy</a> </p>
+                </div>
+                <div class="right-side-terms">
+                    <input type="checkbox" id="termsOfUse">
+                    <p class="privacy-policy">I agree and accept <a href="terms.html" class="animated-link">Terms of Use</a> </p>
+                </div>
+
+                <div class="moveon-message-container">
+                    <p class="moveon-message">You can only move forward if you agree to everything above.</p>
+                    <button id="continueButton" disabled>Continue</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="/js/privacy-terms.js"></script>
+</body>
+</html>

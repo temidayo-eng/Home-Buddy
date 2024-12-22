@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4ECFB;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Left side design start from here */
+/* Left Side with Animation */
+.left-side {
+    flex: 1;
+    background-color: #8e44ad; /* Purple */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-text-container {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.8;
+    color: #f8f8f8;
+    text-align: left;
+    margin: 20px;
+    overflow: hidden;
+    width: 90%;
+}
+
+.animated-text span {
+    display: inline-block; 
+    opacity: 0;
+    position: relative;
+    transform: translateX(50px);
+    animation: textSlideIn 1s ease-in-out forwards;
+    animation-delay: var(--delay);
+}
+
+/* This is used to animate line under the animated texts */
+.animated-text span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6200ea;
+    font-weight: 500;
+    animation: underline 0.6s ease-in-out forwards;
+    animation-delay: calc(var(--delay) + 0.6s);
+}
+
+/* The Keyframe Animations */
+@keyframes textSlideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes underline {
+    to {
+        width: 100%;
+    }
+}
+
+/* this is used to delay Variables for Each Line for one line to appear before the other*/
+.animated-text span:nth-child(1) {
+    --delay: 0s;
+}
+.animated-text span:nth-child(2) {
+    --delay: 1.5s;
+}
+.animated-text span:nth-child(3) {
+    --delay: 3s;
+}
+.animated-text span:nth-child(4) {
+    --delay: 4.5s;
+}
+/* left side design end here */
+
+
+/* Right side design start from here  till the end of the file */
+/* Right Side with Privacy and Terms */
+.right-side {
+    position: relative;
+    flex: 1;
+    background-color: #F4ECFB;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    text-align: left;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-side-policy-terms-container {
+    position: absolute;
+    top: 300px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 1);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: auto;
+    row-gap: 2rem;
+    padding: 2rem;
+}
+
+.right-side-policy-terms-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.right-side-policy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: first baseline;
+    column-gap: 7px;
+}
+
+.right-side-terms {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: first baseline;
+    column-gap: 7px;
+}
+
+.continue-link {
+    text-decoration: none;
+}
+
+.right-side-policy a, .right-side-terms a {
+    text-decoration: none;
+    color: #8e44ad;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+.right-side-policy-terms-container .moveon-message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.moveon-message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5rem;
+    font-size: 14px;
+    color: rgba(11, 10, 11, 0.6);
+    font-weight: bold;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.moveon-message-container {
+    font-size: 14px;
+    color: rgba(11, 10, 11, 0.6);
+    font-weight: bold;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.animated-link {
+    position: relative;
+    text-decoration: none;
+    color: #8e44ad;
+    font-weight: bold;
+}
+
+.animated-link::after {
+    /* this is used to create a line under the link */
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #8e44ad;
+    transition: width 0.3s ease-in-out;
+}
+
+.animated-link:hover::after {
+    width: 100%;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    background-color: #8e44ad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7d26cd;
+}
