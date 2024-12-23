@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4ECFB;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Left side design start from here */
+/* Left Side with Animation */
+.left-side {
+    flex: 1;
+    background-color: #8e44ad; /* Purple */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-text-container {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.8;
+    color: #f8f8f8;
+    text-align: left;
+    margin: 20px;
+    overflow: hidden;
+    width: 90%;
+}
+
+.animated-text span {
+    display: inline-block; 
+    opacity: 0;
+    position: relative;
+    transform: translateX(50px);
+    animation: textSlideIn 1s ease-in-out forwards;
+    animation-delay: var(--delay);
+}
+
+/* Underline Animation */
+.animated-text span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6200ea;
+    font-weight: 500;
+    animation: underline 0.6s ease-in-out forwards;
+    animation-delay: calc(var(--delay) + 0.6s);
+}
+
+/* Keyframe Animations */
+@keyframes textSlideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes underline {
+    to {
+        width: 100%;
+    }
+}
+
+/* this is used to delay Variables for Each Line for one line to appear before the other */
+.animated-text span:nth-child(1) {
+    --delay: 0s;
+}
+.animated-text span:nth-child(2) {
+    --delay: 1.5s;
+}
+.animated-text span:nth-child(3) {
+    --delay: 3s;
+}
+.animated-text span:nth-child(4) {
+    --delay: 4.5s;
+}
+/* Left side design ends here */
+
+
+/* Right side design start from here  till the end of the code*/
+/* Right Side with Privacy and Terms */
+.right-side {
+    position: relative;
+    flex: 1;
+    background-color: #F4ECFB;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    text-align: left;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logIn-SignUp-container {
+    position: absolute;
+    top: 350px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: auto;
+    row-gap: 2rem;
+    padding: 2rem;
+}
+/* SIGNIN/SIGNUP DESIGN START HERE*/
+
+.top-design {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex: 1;
+    background-color: #F4ECFB; /* Purple */
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-design {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    flex: 1;
+    background-color: #F4ECFB;
+    width: 100%;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.homeBuddy {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
+.homeBuddy-logo {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+}
+
+.text-container {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    min-width: 10%;
+    color: #f8f8f8;
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    z-index: 10;
+}
+
+.signUpIn-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.6rem;
+    height: 100%;
+    width: 35em;
+}
+
+.horizontal-line {
+    min-width: 25%; /* Full width of the container */
+    margin: 3px auto;
+    height: 1.1px; /* Thickness of the line */
+    background-color: #dcd8e0; /* Light gray color */
+    border-radius: 50px; /* Rounded edges */
+    padding: 0.2rem;
+}
+
+.signUpIn-container .login-signUp-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5rem;
+}
+
+.login-btn {
+    background-color: rgba(125, 38, 205, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: rgba(160, 38, 205, 0.9);
+    transition: 0.4s ease-in-out;
+}
+
+.signUp-btn {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(125, 38, 205, 1);
+    border: 1.4px solid rgba(125, 38, 205, 1);
+    border-radius: 50px;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+.signUp-btn:hover {
+    background-color: rgba(255, 255, 255, 1); /* Keep the white background */
+    color: rgba(125, 38, 205, 1); /* Keep the text purple */
+    box-shadow: 0 7px 16px rgba(125, 38, 205, 0.4); /* Increased shadow */
+    transition: 0.3s ease-in-out;
+}
+
+.middle-otherlogin-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 0.05rem;
+}
+
+.horizontal-line2 {
+    min-width: 20%;
+    margin: 3px auto;
+    height: 1.1px;
+    background-color: #dcd8e0;
+    border-radius: 50px;
+    padding: 0.08rem;
+}
+
+.login-signup-option-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.4rem;
+    margin-top: 6px;
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(125, 38, 205, 1);
+    border: 2px solid rgba(8, 8, 9, 0.1);
+    width: 80%;
+    border-radius: 50px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+
+.google-signUpIn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+}
+
+.google-signUpIn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(125, 38, 205, 1);
+    box-shadow: 0 7px 16px rgba(125, 38, 205, 0.4);
+    transition: 0.3s ease-in-out;
+}
+
+.google-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+}
+
+.apple-signUpIn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+}
+
+.apple-signUpIn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(125, 38, 205, 1);
+    box-shadow: 0 7px 16px rgba(125, 38, 205, 0.4);
+    transition: 0.3s ease-in-out;
+}
+
+.apple-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+}
+
+.facebook-signUpIn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+}
+
+.facebook-signUpIn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(125, 38, 205, 1);
+    box-shadow: 0 7px 16px rgba(125, 38, 205, 0.4);
+    transition: 0.3s ease-in-out;
+}
+
+.facebook-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 20px;
+}
+
+
+
